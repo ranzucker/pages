@@ -28,7 +28,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: "/github-pages"
+          BASE_PATH: "/pages"
         run: |
           npm run build
           touch build/.nojekyll
@@ -48,7 +48,7 @@ jobs:
       id-token: write
 
     environment:
-      name: github-pages
+      name: pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
